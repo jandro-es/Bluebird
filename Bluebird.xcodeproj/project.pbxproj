@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B17C1EFF1A869C93008C1443 /* BluebirdOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = B17C1EFE1A869C93008C1443 /* BluebirdOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B17C1F151A869D31008C1443 /* OrderedDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C1F131A869D31008C1443 /* OrderedDictionaryTests.swift */; };
+		B17C1F161A869D31008C1443 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C1F141A869D31008C1443 /* LoggerTests.swift */; };
 		B19AC7031A8161490013AE7E /* Bluebird.h in Headers */ = {isa = PBXBuildFile; fileRef = B19AC7021A8161490013AE7E /* Bluebird.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B19AC7091A8161490013AE7E /* Bluebird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19AC6FD1A8161490013AE7E /* Bluebird.framework */; };
-		B19AC7101A8161490013AE7E /* BluebirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19AC70F1A8161490013AE7E /* BluebirdTests.swift */; };
+		B19AC71D1A8161C80013AE7E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19AC71C1A8161C80013AE7E /* Logger.swift */; };
+		B1B990111A82FE6000D9215A /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B990101A82FE6000D9215A /* OrderedDictionary.swift */; };
+		B1B990141A82FED100D9215A /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B990101A82FE6000D9215A /* OrderedDictionary.swift */; };
+		B1FCA5E11A82FB8E009E60F0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19AC71C1A8161C80013AE7E /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,15 +29,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B17C1EFA1A869C93008C1443 /* BluebirdOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BluebirdOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B17C1EFD1A869C93008C1443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B17C1EFE1A869C93008C1443 /* BluebirdOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluebirdOSX.h; sourceTree = "<group>"; };
+		B17C1F131A869D31008C1443 /* OrderedDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedDictionaryTests.swift; sourceTree = "<group>"; };
+		B17C1F141A869D31008C1443 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		B19AC6FD1A8161490013AE7E /* Bluebird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bluebird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19AC7011A8161490013AE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B19AC7021A8161490013AE7E /* Bluebird.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bluebird.h; sourceTree = "<group>"; };
 		B19AC7081A8161490013AE7E /* BluebirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluebirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19AC70E1A8161490013AE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B19AC70F1A8161490013AE7E /* BluebirdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluebirdTests.swift; sourceTree = "<group>"; };
+		B19AC71C1A8161C80013AE7E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B1B990101A82FE6000D9215A /* OrderedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B17C1EF61A869C93008C1443 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B19AC6F91A8161490013AE7E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,11 +69,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B17C1EFB1A869C93008C1443 /* BluebirdOSX */ = {
+			isa = PBXGroup;
+			children = (
+				B17C1EFE1A869C93008C1443 /* BluebirdOSX.h */,
+				B17C1EFC1A869C93008C1443 /* Supporting Files */,
+			);
+			path = BluebirdOSX;
+			sourceTree = "<group>";
+		};
+		B17C1EFC1A869C93008C1443 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B17C1EFD1A869C93008C1443 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B17C1F171A869D3A008C1443 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				B17C1F191A869D47008C1443 /* OrderedDictionary */,
+			);
+			name = DataStructures;
+			sourceTree = "<group>";
+		};
+		B17C1F181A869D43008C1443 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				B17C1F141A869D31008C1443 /* LoggerTests.swift */,
+			);
+			name = Logger;
+			sourceTree = "<group>";
+		};
+		B17C1F191A869D47008C1443 /* OrderedDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				B17C1F131A869D31008C1443 /* OrderedDictionaryTests.swift */,
+			);
+			name = OrderedDictionary;
+			sourceTree = "<group>";
+		};
+		B17C1F1A1A86DB48008C1443 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Set;
+			sourceTree = "<group>";
+		};
+		B17C1F1B1A86DB55008C1443 /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = LinkedList;
+			sourceTree = "<group>";
+		};
+		B17C1F1C1A86DB82008C1443 /* EventHandler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = EventHandler;
+			sourceTree = "<group>";
+		};
 		B19AC6F31A8161490013AE7E = {
 			isa = PBXGroup;
 			children = (
 				B19AC6FF1A8161490013AE7E /* Bluebird */,
 				B19AC70C1A8161490013AE7E /* BluebirdTests */,
+				B17C1EFB1A869C93008C1443 /* BluebirdOSX */,
 				B19AC6FE1A8161490013AE7E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +146,7 @@
 			children = (
 				B19AC6FD1A8161490013AE7E /* Bluebird.framework */,
 				B19AC7081A8161490013AE7E /* BluebirdTests.xctest */,
+				B17C1EFA1A869C93008C1443 /* BluebirdOSX.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				B19AC7021A8161490013AE7E /* Bluebird.h */,
+				B19AC71A1A8161B20013AE7E /* src */,
 				B19AC7001A8161490013AE7E /* Supporting Files */,
 			);
 			path = Bluebird;
@@ -88,7 +172,8 @@
 		B19AC70C1A8161490013AE7E /* BluebirdTests */ = {
 			isa = PBXGroup;
 			children = (
-				B19AC70F1A8161490013AE7E /* BluebirdTests.swift */,
+				B1B9900E1A82FE0C00D9215A /* Data Structures */,
+				B1FCA5DE1A82FAEA009E60F0 /* Logger */,
 				B19AC70D1A8161490013AE7E /* Supporting Files */,
 			);
 			path = BluebirdTests;
@@ -102,9 +187,77 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B19AC71A1A8161B20013AE7E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B17C1F1C1A86DB82008C1443 /* EventHandler */,
+				B1B9900C1A82FDF400D9215A /* Data Structures */,
+				B19AC71B1A8161B90013AE7E /* Logger */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		B19AC71B1A8161B90013AE7E /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				B19AC71C1A8161C80013AE7E /* Logger.swift */,
+			);
+			name = Logger;
+			sourceTree = "<group>";
+		};
+		B1B9900C1A82FDF400D9215A /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				B17C1F1B1A86DB55008C1443 /* LinkedList */,
+				B17C1F1A1A86DB48008C1443 /* Set */,
+				B1B9900D1A82FDFE00D9215A /* OrderedDictionary */,
+			);
+			name = "Data Structures";
+			sourceTree = "<group>";
+		};
+		B1B9900D1A82FDFE00D9215A /* OrderedDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				B1B990101A82FE6000D9215A /* OrderedDictionary.swift */,
+			);
+			name = OrderedDictionary;
+			sourceTree = "<group>";
+		};
+		B1B9900E1A82FE0C00D9215A /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				B1B9900F1A82FE1800D9215A /* OrderedDictionary */,
+			);
+			name = "Data Structures";
+			sourceTree = "<group>";
+		};
+		B1B9900F1A82FE1800D9215A /* OrderedDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				B17C1F181A869D43008C1443 /* Logger */,
+				B17C1F171A869D3A008C1443 /* DataStructures */,
+			);
+			name = OrderedDictionary;
+			sourceTree = "<group>";
+		};
+		B1FCA5DE1A82FAEA009E60F0 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Logger;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		B17C1EF71A869C93008C1443 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B17C1EFF1A869C93008C1443 /* BluebirdOSX.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B19AC6FA1A8161490013AE7E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,6 +269,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		B17C1EF91A869C93008C1443 /* BluebirdOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B17C1F0D1A869C93008C1443 /* Build configuration list for PBXNativeTarget "BluebirdOSX" */;
+			buildPhases = (
+				B17C1EF51A869C93008C1443 /* Sources */,
+				B17C1EF61A869C93008C1443 /* Frameworks */,
+				B17C1EF71A869C93008C1443 /* Headers */,
+				B17C1EF81A869C93008C1443 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BluebirdOSX;
+			productName = BluebirdOSX;
+			productReference = B17C1EFA1A869C93008C1443 /* BluebirdOSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		B19AC6FC1A8161490013AE7E /* Bluebird */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B19AC7131A8161490013AE7E /* Build configuration list for PBXNativeTarget "Bluebird" */;
@@ -161,8 +332,12 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Alejandro Barros Cuetos";
 				TargetAttributes = {
+					B17C1EF91A869C93008C1443 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					B19AC6FC1A8161490013AE7E = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5R59WRDGLW;
 					};
 					B19AC7071A8161490013AE7E = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -182,12 +357,20 @@
 			projectRoot = "";
 			targets = (
 				B19AC6FC1A8161490013AE7E /* Bluebird */,
+				B17C1EF91A869C93008C1443 /* BluebirdOSX */,
 				B19AC7071A8161490013AE7E /* BluebirdTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B17C1EF81A869C93008C1443 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B19AC6FB1A8161490013AE7E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,10 +388,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B17C1EF51A869C93008C1443 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B19AC6F81A8161490013AE7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B19AC71D1A8161C80013AE7E /* Logger.swift in Sources */,
+				B1B990111A82FE6000D9215A /* OrderedDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +408,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B19AC7101A8161490013AE7E /* BluebirdTests.swift in Sources */,
+				B17C1F151A869D31008C1443 /* OrderedDictionaryTests.swift in Sources */,
+				B1B990141A82FED100D9215A /* OrderedDictionary.swift in Sources */,
+				B1FCA5E11A82FB8E009E60F0 /* Logger.swift in Sources */,
+				B17C1F161A869D31008C1443 /* LoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +426,49 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		B17C1F0E1A869C93008C1443 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BluebirdOSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B17C1F0F1A869C93008C1443 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = BluebirdOSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		B19AC7111A8161490013AE7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -266,7 +504,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -306,7 +545,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,6 +559,8 @@
 		B19AC7141A8161490013AE7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +570,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B19AC7151A8161490013AE7E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -379,6 +624,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B17C1F0D1A869C93008C1443 /* Build configuration list for PBXNativeTarget "BluebirdOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B17C1F0E1A869C93008C1443 /* Debug */,
+				B17C1F0F1A869C93008C1443 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B19AC6F71A8161490013AE7E /* Build configuration list for PBXProject "Bluebird" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -395,6 +648,7 @@
 				B19AC7151A8161490013AE7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B19AC7161A8161490013AE7E /* Build configuration list for PBXNativeTarget "BluebirdTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +657,7 @@
 				B19AC7181A8161490013AE7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,15 +9,40 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>BluebirdOSX.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>B17C1EF91A869C93008C1443</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B17C1F031A869C93008C1443</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B19AC6FC1A8161490013AE7E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B19AC7071A8161490013AE7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B1B990191A83038800D9215A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B1B990231A83038900D9215A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
