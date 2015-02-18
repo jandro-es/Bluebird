@@ -67,7 +67,7 @@ struct OrderedDictionary<KeyType: Hashable, ValueType> {
     // MARK: - Initializers
     
     /**
-    Constructor
+    Initializer
     
     :param: items A collection of objects
     
@@ -107,7 +107,7 @@ struct OrderedDictionary<KeyType: Hashable, ValueType> {
     */
     func first() -> (KeyType, ValueType)? {
         
-        if self.isEmpty {
+        if self.isEmpty == false {
             return self.objectAtIndex(0)
         } else {
             return nil
@@ -169,9 +169,22 @@ struct OrderedDictionary<KeyType: Hashable, ValueType> {
     */
     func objectAtIndex(index: Int) -> (KeyType, ValueType) {
         
-        precondition(index < self.array.count && index < 0, Logger.sharedInstance.getMessage("Index out of bounds", .Error))
+        precondition(index < self.array.count && index >= 0, Logger.sharedInstance.getMessage("Index out of bounds", .Error))
         
         return (self.array[index],  self.dictionary[self.array[index]]!)
+    }
+    
+    /**
+    Returns the value for the given key. 
+    Empty optional if it does not exists.
+    
+    :param: key The key of the object
+    
+    :returns: The value for the given key
+    */
+    func objectForKey(key: KeyType) -> ValueType? {
+        
+        return self.dictionary[key]
     }
     
     // MARK: - Mutating methods
@@ -291,7 +304,7 @@ extension OrderedDictionary {
     subscript(index: Int) -> (KeyType, ValueType) {
         
         get {
-            precondition(index < self.array.count, Logger.sharedInstance.getMessage("Index out of bounds", .Error))
+            precondition(index < self.array.count && index >= 0, Logger.sharedInstance.getMessage("Index out of bounds", .Error))
             
             return (self.array[index], self.dictionary[self.array[index]]!)
         }
@@ -307,6 +320,13 @@ extension OrderedDictionary {
 */
 extension OrderedDictionary {
     
+    /**
+    Filters an OrderedDictionary by the given condition
+    
+    :param: condition Lambda function
+    
+    :returns: A filtered OrderedDictionary or empty optional
+    */
     func filter(condition: (ValueType) -> Bool) -> Array<ValueType>? {
         
         var values = Array<ValueType>()
@@ -320,9 +340,16 @@ extension OrderedDictionary {
         return values.isEmpty == false ? values : nil
     }
     
+    /**
+    Applies the function transformation to all elements in the OrderedDictionary
+    
+    :param: transformation A transformation function
+    
+    :returns: Returns an Array with the transformed elements
+    */
     func map(transformation: (ValueType) -> ValueType) -> Array<ValueType>? {
     
-        precondition(self.isEmpty, Logger.sharedInstance.getMessage("You can't map an empty OrderedDictionary", .Error))
+        precondition(self.isEmpty == false, Logger.sharedInstance.getMessage("You can't map an empty OrderedDictionary", .Error))
         
         var values = Array<ValueType>()
         
@@ -333,5 +360,35 @@ extension OrderedDictionary {
         return values
     }
     
-    // TODO: Reduce, Join, Sort, operators, etc..
+    /**
+    Combines all elements in OrderedDictionary using the combine function.
+    
+    :param: seed    The seed to the combine function
+    :param: combine The combine function
+    
+    :returns: The value result from the combination
+    */
+    func reduce<T>(seed: ValueType, combine: (ValueType, T) -> ValueType) -> ValueType {
+        
+        var current = seed
+        for key: KeyType in self.array {
+            current = combine(current, self.objectForKey(key) as T)
+        }
+        
+        return current
+    }
+    
+    mutating func sort(comparison: (ValueType, ValueType) -> Bool) {
+        
+        var array = Array(self.dictionary)
+        array.sort {
+            let (leftKey, leftValue) = $0
+            let (rightKey, rightValue) = $1
+            return comparison(leftValue, rightValue)
+        }
+        
+        // To Finish
+    }
+    
+    // TODO: Join, Sort, sortedSort
 }

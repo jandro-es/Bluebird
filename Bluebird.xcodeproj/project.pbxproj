@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10B959B1A87BCCB005E36A1 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B990101A82FE6000D9215A /* OrderedDictionary.swift */; };
+		B10B959C1A87BCCB005E36A1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19AC71C1A8161C80013AE7E /* Logger.swift */; };
+		B10B959F1A87C2A1005E36A1 /* Sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10B959E1A87C2A1005E36A1 /* Sorts.swift */; };
+		B10B95A11A87C2E2005E36A1 /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10B95A01A87C2E2005E36A1 /* Maths.swift */; };
+		B1648A941A9A647200CEBC76 /* Expressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A931A9A647200CEBC76 /* Expressions.swift */; };
+		B1648A951A9A647200CEBC76 /* Expressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A931A9A647200CEBC76 /* Expressions.swift */; };
+		B1648A981A9A66B500CEBC76 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A971A9A66B500CEBC76 /* Stack.swift */; };
+		B1648A991A9A66B500CEBC76 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A971A9A66B500CEBC76 /* Stack.swift */; };
+		B1648A9B1A9A76ED00CEBC76 /* TupleOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A9A1A9A76ED00CEBC76 /* TupleOperators.swift */; };
+		B1648A9C1A9A76ED00CEBC76 /* TupleOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A9A1A9A76ED00CEBC76 /* TupleOperators.swift */; };
+		B1648A9F1A9A8DC700CEBC76 /* ExpressionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A9E1A9A8DC700CEBC76 /* ExpressionsTests.swift */; };
+		B1648AA01A9A8EEF00CEBC76 /* Expressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A931A9A647200CEBC76 /* Expressions.swift */; };
 		B17C1EFF1A869C93008C1443 /* BluebirdOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = B17C1EFE1A869C93008C1443 /* BluebirdOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B17C1F151A869D31008C1443 /* OrderedDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C1F131A869D31008C1443 /* OrderedDictionaryTests.swift */; };
 		B17C1F161A869D31008C1443 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C1F141A869D31008C1443 /* LoggerTests.swift */; };
 		B19AC7031A8161490013AE7E /* Bluebird.h in Headers */ = {isa = PBXBuildFile; fileRef = B19AC7021A8161490013AE7E /* Bluebird.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B19AC7091A8161490013AE7E /* Bluebird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19AC6FD1A8161490013AE7E /* Bluebird.framework */; };
 		B19AC71D1A8161C80013AE7E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19AC71C1A8161C80013AE7E /* Logger.swift */; };
+		B1A2BC481A881C730041C90B /* CollectionOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2BC471A881C730041C90B /* CollectionOperators.swift */; };
 		B1B990111A82FE6000D9215A /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B990101A82FE6000D9215A /* OrderedDictionary.swift */; };
 		B1B990141A82FED100D9215A /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B990101A82FE6000D9215A /* OrderedDictionary.swift */; };
+		B1CA450C1A9A8F9C00100264 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A971A9A66B500CEBC76 /* Stack.swift */; };
+		B1CA450D1A9A8FA200100264 /* TupleOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A9A1A9A76ED00CEBC76 /* TupleOperators.swift */; };
 		B1FCA5E11A82FB8E009E60F0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19AC71C1A8161C80013AE7E /* Logger.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B10B959E1A87C2A1005E36A1 /* Sorts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sorts.swift; sourceTree = "<group>"; };
+		B10B95A01A87C2E2005E36A1 /* Maths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
+		B1648A931A9A647200CEBC76 /* Expressions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expressions.swift; sourceTree = "<group>"; };
+		B1648A971A9A66B500CEBC76 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		B1648A9A1A9A76ED00CEBC76 /* TupleOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TupleOperators.swift; sourceTree = "<group>"; };
+		B1648A9E1A9A8DC700CEBC76 /* ExpressionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionsTests.swift; sourceTree = "<group>"; };
 		B17C1EFA1A869C93008C1443 /* BluebirdOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BluebirdOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B17C1EFD1A869C93008C1443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B17C1EFE1A869C93008C1443 /* BluebirdOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluebirdOSX.h; sourceTree = "<group>"; };
@@ -40,6 +61,7 @@
 		B19AC7081A8161490013AE7E /* BluebirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluebirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19AC70E1A8161490013AE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B19AC71C1A8161C80013AE7E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B1A2BC471A881C730041C90B /* CollectionOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionOperators.swift; sourceTree = "<group>"; };
 		B1B990101A82FE6000D9215A /* OrderedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +91,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B10B959D1A87C272005E36A1 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				B10B959E1A87C2A1005E36A1 /* Sorts.swift */,
+				B10B95A01A87C2E2005E36A1 /* Maths.swift */,
+				B1648A931A9A647200CEBC76 /* Expressions.swift */,
+			);
+			name = Functions;
+			sourceTree = "<group>";
+		};
+		B1648A961A9A66AB00CEBC76 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				B1648A971A9A66B500CEBC76 /* Stack.swift */,
+			);
+			name = Stack;
+			sourceTree = "<group>";
+		};
+		B1648A9D1A9A8DA800CEBC76 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				B1648A9E1A9A8DC700CEBC76 /* ExpressionsTests.swift */,
+			);
+			name = Functions;
+			sourceTree = "<group>";
+		};
 		B17C1EFB1A869C93008C1443 /* BluebirdOSX */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,30 +132,6 @@
 				B17C1EFD1A869C93008C1443 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B17C1F171A869D3A008C1443 /* DataStructures */ = {
-			isa = PBXGroup;
-			children = (
-				B17C1F191A869D47008C1443 /* OrderedDictionary */,
-			);
-			name = DataStructures;
-			sourceTree = "<group>";
-		};
-		B17C1F181A869D43008C1443 /* Logger */ = {
-			isa = PBXGroup;
-			children = (
-				B17C1F141A869D31008C1443 /* LoggerTests.swift */,
-			);
-			name = Logger;
-			sourceTree = "<group>";
-		};
-		B17C1F191A869D47008C1443 /* OrderedDictionary */ = {
-			isa = PBXGroup;
-			children = (
-				B17C1F131A869D31008C1443 /* OrderedDictionaryTests.swift */,
-			);
-			name = OrderedDictionary;
 			sourceTree = "<group>";
 		};
 		B17C1F1A1A86DB48008C1443 /* Set */ = {
@@ -172,6 +196,7 @@
 		B19AC70C1A8161490013AE7E /* BluebirdTests */ = {
 			isa = PBXGroup;
 			children = (
+				B1648A9D1A9A8DA800CEBC76 /* Functions */,
 				B1B9900E1A82FE0C00D9215A /* Data Structures */,
 				B1FCA5DE1A82FAEA009E60F0 /* Logger */,
 				B19AC70D1A8161490013AE7E /* Supporting Files */,
@@ -190,6 +215,8 @@
 		B19AC71A1A8161B20013AE7E /* src */ = {
 			isa = PBXGroup;
 			children = (
+				B1A2BC461A881C5D0041C90B /* Operators */,
+				B10B959D1A87C272005E36A1 /* Functions */,
 				B17C1F1C1A86DB82008C1443 /* EventHandler */,
 				B1B9900C1A82FDF400D9215A /* Data Structures */,
 				B19AC71B1A8161B90013AE7E /* Logger */,
@@ -205,9 +232,19 @@
 			name = Logger;
 			sourceTree = "<group>";
 		};
+		B1A2BC461A881C5D0041C90B /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				B1A2BC471A881C730041C90B /* CollectionOperators.swift */,
+				B1648A9A1A9A76ED00CEBC76 /* TupleOperators.swift */,
+			);
+			name = Operators;
+			sourceTree = "<group>";
+		};
 		B1B9900C1A82FDF400D9215A /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				B1648A961A9A66AB00CEBC76 /* Stack */,
 				B17C1F1B1A86DB55008C1443 /* LinkedList */,
 				B17C1F1A1A86DB48008C1443 /* Set */,
 				B1B9900D1A82FDFE00D9215A /* OrderedDictionary */,
@@ -234,8 +271,7 @@
 		B1B9900F1A82FE1800D9215A /* OrderedDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				B17C1F181A869D43008C1443 /* Logger */,
-				B17C1F171A869D3A008C1443 /* DataStructures */,
+				B17C1F131A869D31008C1443 /* OrderedDictionaryTests.swift */,
 			);
 			name = OrderedDictionary;
 			sourceTree = "<group>";
@@ -243,6 +279,7 @@
 		B1FCA5DE1A82FAEA009E60F0 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
+				B17C1F141A869D31008C1443 /* LoggerTests.swift */,
 			);
 			name = Logger;
 			sourceTree = "<group>";
@@ -392,6 +429,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1648A991A9A66B500CEBC76 /* Stack.swift in Sources */,
+				B1648A9C1A9A76ED00CEBC76 /* TupleOperators.swift in Sources */,
+				B10B959B1A87BCCB005E36A1 /* OrderedDictionary.swift in Sources */,
+				B10B959C1A87BCCB005E36A1 /* Logger.swift in Sources */,
+				B1648A951A9A647200CEBC76 /* Expressions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,8 +441,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1648A9B1A9A76ED00CEBC76 /* TupleOperators.swift in Sources */,
+				B1A2BC481A881C730041C90B /* CollectionOperators.swift in Sources */,
 				B19AC71D1A8161C80013AE7E /* Logger.swift in Sources */,
+				B1648A981A9A66B500CEBC76 /* Stack.swift in Sources */,
+				B10B959F1A87C2A1005E36A1 /* Sorts.swift in Sources */,
 				B1B990111A82FE6000D9215A /* OrderedDictionary.swift in Sources */,
+				B10B95A11A87C2E2005E36A1 /* Maths.swift in Sources */,
+				B1648A941A9A647200CEBC76 /* Expressions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,10 +456,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1CA450D1A9A8FA200100264 /* TupleOperators.swift in Sources */,
+				B1648A9F1A9A8DC700CEBC76 /* ExpressionsTests.swift in Sources */,
 				B17C1F151A869D31008C1443 /* OrderedDictionaryTests.swift in Sources */,
+				B1CA450C1A9A8F9C00100264 /* Stack.swift in Sources */,
 				B1B990141A82FED100D9215A /* OrderedDictionary.swift in Sources */,
 				B1FCA5E11A82FB8E009E60F0 /* Logger.swift in Sources */,
 				B17C1F161A869D31008C1443 /* LoggerTests.swift in Sources */,
+				B1648AA01A9A8EEF00CEBC76 /* Expressions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +683,7 @@
 				B17C1F0F1A869C93008C1443 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B19AC6F71A8161490013AE7E /* Build configuration list for PBXProject "Bluebird" */ = {
 			isa = XCConfigurationList;

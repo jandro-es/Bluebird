@@ -193,4 +193,16 @@ class OrderedDictionaryTests: XCTestCase {
         XCTAssert(result![0] == "valueone", "map() working properly")
         XCTAssert(result![0] != "valueOne", "map() working properly")
     }
+
+    func testReduce() {
+        
+//        var reduce = {
+//            (accu: String, item: String) -> String in
+//            return accu + item
+//        }
+//        
+//        let result = orderedDictionary?.reduce(orderedDictionary?.objectAtIndex(0), combine: reduce)
+        
+        
+    }
 }

@@ -1,7 +1,7 @@
 //
-//  LoggerTests.swift
+//  Sorts.swift
 //
-//  Created by Alejandro Barros Cuetos on 03/02/15.
+//  Created by Alejandro Barros Cuetos on 08/02/15.
 //  Copyright (c) 2015 Alejandro Barros Cuetos. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
@@ -27,38 +27,4 @@
 //  POSSIBILITY OF SUCH DAMAGE.
 //
 
-import XCTest
-import Bluebird
-
-class LoggerTests: XCTestCase {
-
-    override func setUp()
-    {
-        super.setUp()
-    }
-    
-    override func tearDown()
-    {
-        super.tearDown()
-    }
-    
-    /**
-    This test will always pass. Check the output in the debug console.
-    */
-    func testLogMessage()
-    {
-        Logger.sharedInstance.logMessage("Testing Error Message", .Error)
-        
-        Logger.sharedInstance.logMessage("Testing Warning Message", .Warning)
-        
-        Logger.sharedInstance.logMessage("Testing Success Message", .Success)
-        
-        Logger.sharedInstance.logMessage("Testing Info Message", .Info)
-        
-        Logger.sharedInstance.logMessage("Testing Custom Message without calling class", .Custom)
-        
-        Logger.sharedInstance.logMessageAndAssert({3 > 5}(), "Index out of bounds")
-        
-        XCTAssert(true, "Pass")
-    }
-}
+import Foundation
