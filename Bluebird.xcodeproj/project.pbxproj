@@ -15,10 +15,11 @@
 		B1648A951A9A647200CEBC76 /* Expressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A931A9A647200CEBC76 /* Expressions.swift */; };
 		B1648A981A9A66B500CEBC76 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A971A9A66B500CEBC76 /* Stack.swift */; };
 		B1648A991A9A66B500CEBC76 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A971A9A66B500CEBC76 /* Stack.swift */; };
-		B1648A9B1A9A76ED00CEBC76 /* TupleOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A9A1A9A76ED00CEBC76 /* TupleOperators.swift */; };
-		B1648A9C1A9A76ED00CEBC76 /* TupleOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A9A1A9A76ED00CEBC76 /* TupleOperators.swift */; };
 		B1648A9F1A9A8DC700CEBC76 /* ExpressionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A9E1A9A8DC700CEBC76 /* ExpressionsTests.swift */; };
 		B1648AA01A9A8EEF00CEBC76 /* Expressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A931A9A647200CEBC76 /* Expressions.swift */; };
+		B17697E51AA39F0B00487803 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17697E41AA39F0B00487803 /* StackTests.swift */; };
+		B1785ED11AA3CAEE00CB2207 /* CollectionOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2BC471A881C730041C90B /* CollectionOperators.swift */; };
+		B1785ED21AA3CAF700CB2207 /* CollectionOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2BC471A881C730041C90B /* CollectionOperators.swift */; };
 		B17C1EFF1A869C93008C1443 /* BluebirdOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = B17C1EFE1A869C93008C1443 /* BluebirdOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B17C1F151A869D31008C1443 /* OrderedDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C1F131A869D31008C1443 /* OrderedDictionaryTests.swift */; };
 		B17C1F161A869D31008C1443 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C1F141A869D31008C1443 /* LoggerTests.swift */; };
@@ -29,7 +30,6 @@
 		B1B990111A82FE6000D9215A /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B990101A82FE6000D9215A /* OrderedDictionary.swift */; };
 		B1B990141A82FED100D9215A /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B990101A82FE6000D9215A /* OrderedDictionary.swift */; };
 		B1CA450C1A9A8F9C00100264 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A971A9A66B500CEBC76 /* Stack.swift */; };
-		B1CA450D1A9A8FA200100264 /* TupleOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1648A9A1A9A76ED00CEBC76 /* TupleOperators.swift */; };
 		B1FCA5E11A82FB8E009E60F0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19AC71C1A8161C80013AE7E /* Logger.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,8 +48,8 @@
 		B10B95A01A87C2E2005E36A1 /* Maths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
 		B1648A931A9A647200CEBC76 /* Expressions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expressions.swift; sourceTree = "<group>"; };
 		B1648A971A9A66B500CEBC76 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		B1648A9A1A9A76ED00CEBC76 /* TupleOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TupleOperators.swift; sourceTree = "<group>"; };
 		B1648A9E1A9A8DC700CEBC76 /* ExpressionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionsTests.swift; sourceTree = "<group>"; };
+		B17697E41AA39F0B00487803 /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		B17C1EFA1A869C93008C1443 /* BluebirdOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BluebirdOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B17C1EFD1A869C93008C1443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B17C1EFE1A869C93008C1443 /* BluebirdOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluebirdOSX.h; sourceTree = "<group>"; };
@@ -117,6 +117,14 @@
 			name = Functions;
 			sourceTree = "<group>";
 		};
+		B17697E31AA39EF600487803 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				B17697E41AA39F0B00487803 /* StackTests.swift */,
+			);
+			name = Stack;
+			sourceTree = "<group>";
+		};
 		B17C1EFB1A869C93008C1443 /* BluebirdOSX */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,13 +140,6 @@
 				B17C1EFD1A869C93008C1443 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B17C1F1A1A86DB48008C1443 /* Set */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Set;
 			sourceTree = "<group>";
 		};
 		B17C1F1B1A86DB55008C1443 /* LinkedList */ = {
@@ -236,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				B1A2BC471A881C730041C90B /* CollectionOperators.swift */,
-				B1648A9A1A9A76ED00CEBC76 /* TupleOperators.swift */,
 			);
 			name = Operators;
 			sourceTree = "<group>";
@@ -246,7 +246,6 @@
 			children = (
 				B1648A961A9A66AB00CEBC76 /* Stack */,
 				B17C1F1B1A86DB55008C1443 /* LinkedList */,
-				B17C1F1A1A86DB48008C1443 /* Set */,
 				B1B9900D1A82FDFE00D9215A /* OrderedDictionary */,
 			);
 			name = "Data Structures";
@@ -263,6 +262,7 @@
 		B1B9900E1A82FE0C00D9215A /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				B17697E31AA39EF600487803 /* Stack */,
 				B1B9900F1A82FE1800D9215A /* OrderedDictionary */,
 			);
 			name = "Data Structures";
@@ -429,8 +429,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1785ED21AA3CAF700CB2207 /* CollectionOperators.swift in Sources */,
 				B1648A991A9A66B500CEBC76 /* Stack.swift in Sources */,
-				B1648A9C1A9A76ED00CEBC76 /* TupleOperators.swift in Sources */,
 				B10B959B1A87BCCB005E36A1 /* OrderedDictionary.swift in Sources */,
 				B10B959C1A87BCCB005E36A1 /* Logger.swift in Sources */,
 				B1648A951A9A647200CEBC76 /* Expressions.swift in Sources */,
@@ -441,7 +441,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1648A9B1A9A76ED00CEBC76 /* TupleOperators.swift in Sources */,
 				B1A2BC481A881C730041C90B /* CollectionOperators.swift in Sources */,
 				B19AC71D1A8161C80013AE7E /* Logger.swift in Sources */,
 				B1648A981A9A66B500CEBC76 /* Stack.swift in Sources */,
@@ -456,11 +455,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1CA450D1A9A8FA200100264 /* TupleOperators.swift in Sources */,
+				B1785ED11AA3CAEE00CB2207 /* CollectionOperators.swift in Sources */,
 				B1648A9F1A9A8DC700CEBC76 /* ExpressionsTests.swift in Sources */,
 				B17C1F151A869D31008C1443 /* OrderedDictionaryTests.swift in Sources */,
 				B1CA450C1A9A8F9C00100264 /* Stack.swift in Sources */,
 				B1B990141A82FED100D9215A /* OrderedDictionary.swift in Sources */,
+				B17697E51AA39F0B00487803 /* StackTests.swift in Sources */,
 				B1FCA5E11A82FB8E009E60F0 /* Logger.swift in Sources */,
 				B17C1F161A869D31008C1443 /* LoggerTests.swift in Sources */,
 				B1648AA01A9A8EEF00CEBC76 /* Expressions.swift in Sources */,
@@ -494,6 +494,7 @@
 				INFOPLIST_FILE = BluebirdOSX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -514,6 +515,7 @@
 				INFOPLIST_FILE = BluebirdOSX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -620,6 +622,7 @@
 				INFOPLIST_FILE = Bluebird/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -638,6 +641,7 @@
 				INFOPLIST_FILE = Bluebird/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -656,6 +660,7 @@
 				);
 				INFOPLIST_FILE = BluebirdTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -669,6 +674,7 @@
 				);
 				INFOPLIST_FILE = BluebirdTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

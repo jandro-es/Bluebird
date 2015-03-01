@@ -1,7 +1,7 @@
 //
-//  Stack.swift
+//  StackTests.swift
 //
-//  Created by Alejandro Barros Cuetos on 22/02/15.
+//  Created by Alejandro Barros Cuetos on 03/02/15.
 //  Copyright (c) 2015 Alejandro Barros Cuetos. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
@@ -28,43 +28,30 @@
 //
 
 import Foundation
+import XCTest
 
-struct Stack<T>
-{
-    // MARK: - Internal storage
+class StackTests: XCTestCase {
     
-    private var elements: [T]
-    
-    // MARK: - Observer properties
-    
-    var count: Int { return countElements(elements) }
-    var isEmpty: Bool { return elements.isEmpty }
-    var topItem: T? { return isEmpty ? nil : elements[count - 1] }
-    
-    // MARK: - Initializers
-    
-    init(_ elements: [T]) {
-        self.elements = elements
+    override func setUp() {
+        super.setUp()
     }
     
-    init(stack: Stack<T>) {
-        elements = stack.elements
+    override func tearDown() {
+        super.tearDown()
     }
     
-    init() {
-        elements = [T]()
-    }
-    
-    // MARK: - Mutating methods
-    
-    mutating func push(element: T) {
-        elements.append(element)
-    }
-    
-    mutating func pop() -> T {
-        precondition(!isEmpty, Logger.sharedInstance.getMessage("Can't POP in an empty Stack", .Error))
+    func testInits() {
+        var emptyStack: Stack = Stack<String>()
+        XCTAssert(emptyStack.count == 0 && emptyStack.isEmpty == true, "Empty init")
         
-        return elements.removeLast()
+        var nonEmptyStack: Stack = Stack<String>(["string1", "string2", "string3"])
+        XCTAssert(nonEmptyStack.count == 3 && nonEmptyStack.isEmpty == false, "Non Empty init")
+        
+        var stackFromAnotherStack: Stack = Stack<String>(stack: nonEmptyStack)
+        XCTAssert(stackFromAnotherStack.count == 3 && stackFromAnotherStack.isEmpty == false, "Init from another stack")
     }
     
+    func testOperations() {
+        
+    }
 }

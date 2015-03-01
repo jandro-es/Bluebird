@@ -27,8 +27,8 @@
 //  POSSIBILITY OF SUCH DAMAGE.
 //
 
-import XCTest
 import Bluebird
+import XCTest
 
 class LoggerTests: XCTestCase {
 
@@ -56,8 +56,6 @@ class LoggerTests: XCTestCase {
         Logger.sharedInstance.logMessage("Testing Info Message", .Info)
         
         Logger.sharedInstance.logMessage("Testing Custom Message without calling class", .Custom)
-        
-        Logger.sharedInstance.logMessageAndAssert({3 > 5}(), "Index out of bounds")
         
         XCTAssert(true, "Pass")
     }
