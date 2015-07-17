@@ -146,17 +146,5 @@ class Logger {
 
     // MARK: - Thread Safe Singleton Pattern
     
-    class var sharedInstance: Logger {
-        
-        struct StaticStruct {
-            static var instance: Logger?
-            static var token: dispatch_once_t = 0
-        }
-        
-        dispatch_once(&StaticStruct.token) {
-            StaticStruct.instance = Logger()
-        }
-        
-        return StaticStruct.instance!
-    }
+    static let sharedInstance()
 }
