@@ -146,5 +146,5 @@ class Logger {
 
     // MARK: - Thread Safe Singleton Pattern
     
-    static let sharedInstance()
+    static let sharedInstance = Logger()
 }
