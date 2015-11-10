@@ -40,13 +40,20 @@ Available Log level for Logger
 - Custom:  Message of level Custom
 */
 enum LoggerLevels: Int {
-    
+
     case None = 0
     case Error
     case Warning
     case Success
     case Info
     case Custom
+}
+
+enum PathLengths: Int {
+
+    case None = 0
+    case Short
+    case Long
 }
 
 /**
@@ -58,6 +65,10 @@ class Logger {
     // MARK: - Properties
 
     var verbosityLevel: LoggerLevels = .Custom
+
+    var pathLength: PathLengths = .Long
+
+    var timeStampState: Bool = false
 
     var errorGlyph: String = "\u{1F6AB}"    // Glyph for messages of level .Error
     var warningGlyph: String = "\u{1F514}"  // Glyph for messages of level .Warning
@@ -71,62 +82,77 @@ class Logger {
     Prints a formatted message through the debug console,
     showing a glyph based on the loglevel and the name of the file
     invoking it if present
-    
+
     :param: message      Message to print
     :param: logLevel     Level of the log message
     :param: file         Implicit parameter, file calling the method
     :param: line         Implicit parameter, line which the call was made
     */
-    func logMessage(message: StaticString , _ logLevel: LoggerLevels = .Info, file: StaticString = __FILE__, line: UWord = __LINE__) {
-        
-        if self.verbosityLevel.rawValue > LoggerLevels.None.rawValue &&  logLevel.rawValue <= self.verbosityLevel.rawValue {
-            println("\(getGlyphForLogLevel(logLevel))\(message) [\(file):\(line)] \(message)")
+    func logMessage(message: StaticString , _ logLevel: LoggerLevels = .Info, file: String = __FILE__, line: UWord = __LINE__) {
+
+        var outputMessage: String = ""
+
+        if self.verbosityLevel.rawValue > LoggerLevels.None.rawValue && logLevel.rawValue <= self.verbosityLevel.rawValue {
+            switch self.pathLength.rawValue {
+
+            case PathLengths.Long.rawValue:
+                outputMessage += "\(getGlyphForLogLevel(logLevel))\(message) [\(file):\(line)] \(message)")
+                break
+            case PathLengths.Short.rawValue:
+                outputMessage += "\(getGlyphForLogLevel(logLevel))\(message) [\(file.lastPathComponent.stringByDeletingPathExtension):\(line)]"
+                break
+            default:
+                outputMessage += "\(getGlyphForLogLevel(logLevel))\(message)"
+                break
+            }
+
+            self.timeStampState ? print(outputMessage + " " + self.getTimeStamp()) : print(outputMessage)
         }
     }
-    
+
     /**
     Prints a formatted message through the debug console,
     showing a glyph based on the loglevel and the name of the class
     invoking it if present
-    
+
     :param: message      Message to print
     :param: logLevel     Level of the log message
     :param: file         Implicit parameter, file calling the method
     :param: line         Implicit parameter, line which the call was made
-    
+
     :returns: A formatted string
     */
     func getMessage(message: StaticString, _ logLevel: LoggerLevels = .Info, file: StaticString = __FILE__, line: UWord = __LINE__) -> String {
-        
+
         return("\(getGlyphForLogLevel(logLevel))\(message) [\(file):\(line)] \(message)")
     }
-    
+
     /**
     Logs the given message as a custom message and
     check the condition of the assert.
-    
-    :param: condition Condition clousure for the assert
+
+    :param: condition Condition closure for the assert
     :param: message   Message to print
     :param: file      Implicit parameter, file calling the method
     :param: line      Implicit parameter, line which the call was made
     */
-    func logMessageAndAssert(condition: @autoclosure () -> Bool, _ message: StaticString, file: StaticString = __FILE__, line: UWord = __LINE__) {
-        
+    func logMessageAndAssert(@autoclosure condition: () -> Bool, _ message: StaticString, file: StaticString = __FILE__, line: UWord = __LINE__) {
+
         logMessage(message, .Custom)
         assert(condition, message.description, file: file, line: line)
     }
-    
+
     // MARK: - Private Methods
-    
+
     /**
     Returns the Glyph to use according to the passed LogLevel
-    
+
     :param: logLevel
-    
+
     :returns: A formatted string with the matching glyph
     */
     private func getGlyphForLogLevel(logLevel: LoggerLevels) -> String {
-        
+
         switch logLevel
         {
         case .Error:
@@ -144,7 +170,20 @@ class Logger {
         }
     }
 
+    /**
+    Returns the current Time Stamp
+
+    :returns: A formatted string with the current time stamp
+    */
+    private func getTimeStamp() -> String {
+
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss.zzz"
+        let timeStamp = dateFormatter.stringFromDate(NSDate())
+        return "[" + timeStamp + "]"
+    }
+
     // MARK: - Thread Safe Singleton Pattern
-    
+
     static let sharedInstance = Logger()
 }
