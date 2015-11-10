@@ -89,7 +89,7 @@ class Logger {
     :param: method       Implicity parameter, method that was called
     :param: line         Implicit parameter, line which the call was made
     */
-    func logMessage(message: StaticString , _ logLevel: LoggerLevels = .Info, file: String = __FILE__, method: String = __FUNCTION__, line: UWord = __LINE__) {
+    func logMessage(message: String , _ logLevel: LoggerLevels = .Info, file: String = __FILE__, method: String = __FUNCTION__, line: UWord = __LINE__) {
 
         var outputMessage: String = ""
 
