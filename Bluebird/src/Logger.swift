@@ -89,7 +89,7 @@ class Logger {
     :param: method       Implicity parameter, method that was called
     :param: line         Implicit parameter, line which the call was made
     */
-    func logMessage(message: String , _ logLevel: LoggerLevels = .Info, file: String = __FILE__, method: String = __FUNCTION__, line: UWord = __LINE__) {
+    func logMessage(message: String , _ logLevel: LoggerLevels = .Info, file: String = __FILE__, method: String = __FUNCTION__, line: UInt = __LINE__) {
 
         var outputMessage: String = ""
 
@@ -100,7 +100,7 @@ class Logger {
                 outputMessage += "\(getGlyphForLogLevel(logLevel))\(message) [\(file):\(line)] \(message)")
                 break
             case PathLengths.Short.rawValue:
-                outputMessage += "\(getGlyphForLogLevel(logLevel))\(message) [\(file.lastPathComponent.stringByDeletingPathExtension):\(method):\(line)]"
+                outputMessage += "\(getGlyphForLogLevel(logLevel))\(message) [\(NSURL(fileURLWithPath:file).URLByDeletingPathExtension!.lastPathComponent!):\(method):\(line)]"
                 break
             default:
                 outputMessage += "\(getGlyphForLogLevel(logLevel))\(message)"
@@ -123,7 +123,7 @@ class Logger {
 
     :returns: A formatted string
     */
-    func getMessage(message: StaticString, _ logLevel: LoggerLevels = .Info, file: StaticString = __FILE__, line: UWord = __LINE__) -> String {
+    func getMessage(message: StaticString, _ logLevel: LoggerLevels = .Info, file: StaticString = __FILE__, line: UInt = __LINE__) -> String {
 
         return("\(getGlyphForLogLevel(logLevel))\(message) [\(file):\(line)] \(message)")
     }
@@ -137,7 +137,7 @@ class Logger {
     :param: file      Implicit parameter, file calling the method
     :param: line      Implicit parameter, line which the call was made
     */
-    func logMessageAndAssert(@autoclosure condition: () -> Bool, _ message: StaticString, file: StaticString = __FILE__, line: UWord = __LINE__) {
+    func logMessageAndAssert(@autoclosure condition: () -> Bool, _ message: StaticString, file: StaticString = __FILE__, line: UInt = __LINE__) {
 
         logMessage(message, .Custom)
         assert(condition, message.description, file: file, line: line)
